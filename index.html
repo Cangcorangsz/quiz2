@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="Indonesia">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&family=Poppins:wght@200;300;400;600;700&family=Raleway&display=swap"
+        rel="stylesheet">
+    <!-- 
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Pacifico', cursive;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Raleway', sans-serif;
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container" id="mainContainer">
+        <h1>Kuis Menuju Indonesia Cerdas</h1>
+
+        <a href="Result.html">sasas</a>
+        
+        <form action="Result.html" id="myForm" onsubmit="return validation()" method="post">
+            
+            <p class="warning">Gunakan kalkulator jika Perlu!</p>
+
+            <!-- =====Soal Satu===== -->
+            <div class="soal-satu persoalan" id="firstQuestion">
+                <label for="inputSatu"><span class="penanda-soal">Soal 1:</span>
+                    <p>
+                        Terdapat 3 orang yang akan memasuki sebuah gedung yang memiliki 4 pintu. Banyak cara mereka
+                        memasuki
+                        gedung tersebut dari pintu yang berlainan adalah ...
+                    </p>
+                </label> <br>
+                <input type="text" name="inputSatu" id="inputSatu" placeholder="Jawaban anda">
+            </div>
+
+            <!-- =====Soal Dua===== -->
+            <div class="soal-dua persoalan" id="secondQuestion">
+                <label for="inputDua"><span class="penanda-soal">Soal 2:</span>
+                    <p>
+                        Alea mengambil 3 buah bola sekaligus dari sebuah kotak yang berisi 4 bola biru dan 4 bola merah.
+                        Jika Alea ingin mengambil 2 bola biru dan 1 bola merah, maka banyak cara mengambil 3 bola merah
+                        tersebut adalah ... cara
+                    </p>
+                </label> <br>
+                <input type="text" name="inputDua" id="inputDua" placeholder="Jawaban anda">
+            </div>
+
+            <!-- =====Soal Tiga===== -->
+            <div class="soal-tiga persoalan" id="thirdQuestion">
+                <label for="inputTiga"><span class="penanda-soal">Soal 3:</span>
+                    <p>
+                        Tedi, Bruno, Mali, David, dan Nuno bermain duduk melingkar. Jika Bruno dan Mali harus
+                        berdampingan serta Tedi dan David juga harus selalu berdampingan, maka banyak formasi duduk yang
+                        dapat dibentuk adalah ...
+                    </p>
+                </label> <br>
+                <input type="text" name="inputTiga" id="inputTiga" placeholder="Jawaban anda">
+            </div>
+
+            <!-- =====Soal Empat===== -->
+            <div class="soal-empat persoalan" id="fourthQuestion">
+                <label for="inputEmpat"><span class="penanda-soal">Soal 4:</span>
+                    <p>
+                        Satria memiliki 12 bola yang identik dan akan dimasukan ke dalam 3 kotak dengan jumlah yang
+                        sama. Banyak cara Satria mendistribusikan bola-bola ke 3 kotak tersebut adalah ...
+                    </p>
+                </label> <br>
+                <input type="text" name="inputEmpat" id="inputEmpat" placeholder="Jawaban anda">
+            </div>
+
+            <!-- =====Soal Lima===== -->
+            <div class="soal-lima persoalan" id="fifthQuestion">
+                <label for="inputLima"><span class="penanda-soal">Soal 5:</span>
+                    <p>
+                        Diketahui terdapat 6 kursi yang disusun dalam dua baris, yaitu baris R dan S. Pada masing-masing
+                        baris terdapat 3 buah kursi. Banyak cara mengatur posisi duduk 6 orang dengan 2 orang tertentu
+                        harus selalu duduk di baris R adalah ...
+                    </p>
+                </label> <br>
+                <input type="text" name="inputLima" id="inputLima" placeholder="Jawaban anda">
+            </div>
+
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+
+    <script>
+        const mainContainer = document.getElementById("mainContainer");
+        const myForm = document.getElementById("myForm");
+        const firstQuestion = document.getElementById("firstQuestion");
+        const inputSatu = document.getElementById("inputSatu");
+
+        const secondQuestion = document.getElementById("secondQuestion");
+        const inputDua = document.getElementById("inputDua");
+
+        const thirdQuestion= document.getElementById("thirdQuestion");
+        const inputTiga = document.getElementById("inputTiga");
+
+        const fourthQuestion= document.getElementById("fourthQuestion");
+        const inputEmpat = document.getElementById("inputEmpat");
+
+        const fifthQuestion= document.getElementById("fifthQuestion");
+        const inputLima = document.getElementById("inputLima");
+
+        function validation() {
+            if (inputSatu.value.trim() == "" || inputDua.value.trim() == "" || inputTiga.value.trim() == "" || inputEmpat.value.trim() == "" || inputLima.value.trim() == "") {
+                alert("Tolong isi semua kolom jawaban dan bukan spasi kosong");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        if (inputSatu.value != "") {
+            inputSatu.classList.add("biru");
+        } else {
+            inputSatu.classList.remove("biru");
+        }
+    </script>
+
+</body>
+
+</html>
