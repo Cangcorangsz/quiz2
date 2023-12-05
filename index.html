@@ -22,10 +22,8 @@
 <body>
     <div class="main-container" id="mainContainer">
         <h1>Kuis Menuju Indonesia Cerdas</h1>
-
-        <a href="Result.html">sasas</a>
         
-        <form action="Result.html" id="myForm" onsubmit="return validation()" method="post">
+        <form id="myForm" onsubmit="return validation()" method="post">
             
             <p class="warning">Gunakan kalkulator jika Perlu!</p>
 
@@ -38,7 +36,7 @@
                         gedung tersebut dari pintu yang berlainan adalah ...
                     </p>
                 </label> <br>
-                <input type="text" name="inputSatu" id="inputSatu" placeholder="Jawaban anda">
+                <input type="text" class="input-text" name="inputSatu" id="inputSatu" placeholder="Jawaban anda">
             </div>
 
             <!-- =====Soal Dua===== -->
@@ -50,7 +48,7 @@
                         tersebut adalah ... cara
                     </p>
                 </label> <br>
-                <input type="text" name="inputDua" id="inputDua" placeholder="Jawaban anda">
+                <input type="text" class="input-text" name="inputDua" id="inputDua" placeholder="Jawaban anda">
             </div>
 
             <!-- =====Soal Tiga===== -->
@@ -62,7 +60,7 @@
                         dapat dibentuk adalah ...
                     </p>
                 </label> <br>
-                <input type="text" name="inputTiga" id="inputTiga" placeholder="Jawaban anda">
+                <input type="text" class="input-text" name="inputTiga" id="inputTiga" placeholder="Jawaban anda">
             </div>
 
             <!-- =====Soal Empat===== -->
@@ -73,7 +71,7 @@
                         sama. Banyak cara Satria mendistribusikan bola-bola ke 3 kotak tersebut adalah ...
                     </p>
                 </label> <br>
-                <input type="text" name="inputEmpat" id="inputEmpat" placeholder="Jawaban anda">
+                <input type="text" class="input-text" name="inputEmpat" id="inputEmpat" placeholder="Jawaban anda">
             </div>
 
             <!-- =====Soal Lima===== -->
@@ -85,46 +83,15 @@
                         harus selalu duduk di baris R adalah ...
                     </p>
                 </label> <br>
-                <input type="text" name="inputLima" id="inputLima" placeholder="Jawaban anda">
+                <input type="text" class="input-text" name="inputLima" id="inputLima" placeholder="Jawaban anda">
             </div>
 
-            <input type="submit" value="Submit" class="submit">
+            <button type="submit" class="submit" id="button">Cek jawaban</button>
         </form>
+
     </div>
 
-    <script>
-        const mainContainer = document.getElementById("mainContainer");
-        const myForm = document.getElementById("myForm");
-        const firstQuestion = document.getElementById("firstQuestion");
-        const inputSatu = document.getElementById("inputSatu");
-
-        const secondQuestion = document.getElementById("secondQuestion");
-        const inputDua = document.getElementById("inputDua");
-
-        const thirdQuestion= document.getElementById("thirdQuestion");
-        const inputTiga = document.getElementById("inputTiga");
-
-        const fourthQuestion= document.getElementById("fourthQuestion");
-        const inputEmpat = document.getElementById("inputEmpat");
-
-        const fifthQuestion= document.getElementById("fifthQuestion");
-        const inputLima = document.getElementById("inputLima");
-
-        function validation() {
-            if (inputSatu.value.trim() == "" || inputDua.value.trim() == "" || inputTiga.value.trim() == "" || inputEmpat.value.trim() == "" || inputLima.value.trim() == "") {
-                alert("Tolong isi semua kolom jawaban dan bukan spasi kosong");
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        if (inputSatu.value != "") {
-            inputSatu.classList.add("biru");
-        } else {
-            inputSatu.classList.remove("biru");
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
